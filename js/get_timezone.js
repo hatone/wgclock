@@ -1,7 +1,7 @@
 function getMyTimezone(){
   document.write("this is debug.");
   httpObj = new XMLHttpRequest();
-  httpObj.open("get", "./seeds/timezone_list.json", true);
+  httpObj.open("get", ".js/seeds/timezone_list.json", true);
   httpObj.onload = function(){
     var myData = JSON.parse(this.responseText);
     var txt = "";
