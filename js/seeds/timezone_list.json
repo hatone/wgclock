@@ -1,0 +1,17 @@
+{"timezone":[
+  { 
+    "code":0,
+    "name":"GMT",
+    "difference":0
+  },
+  { 
+    "code":1,
+    "name":"JST",
+    "difference":8
+  },
+  { 
+    "code":2,
+    "name":"PST",
+    "difference":-8
+  }
+]}
