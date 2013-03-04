@@ -8,7 +8,7 @@ function getMyTimezone(){
     for (var i=0; i<myData.timezone.length; i++){
       txt = txt + myData.timezone[i].name + " is " + myData.timezone[i].difference+" difference<br>";
     }
-    document.getElementById("result").innerHTML = txt;
+    document.write(txt);
   }
   httpObj.send(null);
 }
