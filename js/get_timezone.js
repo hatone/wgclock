@@ -5,8 +5,8 @@ function getMyTimezone(){
   httpObj.onload = function(){
     var myData = JSON.parse(this.responseText);
     var txt = "";
-    for (var i=0; i<myData.item.length; i++){
-      txt = txt + myData.item[i].name + " is " + myData.item[i].difference+" difference<br>";
+    for (var i=0; i<myData.timezone.length; i++){
+      txt = txt + myData.timezone[i].name + " is " + myData.timezone[i].difference+" difference<br>";
     }
     document.getElementById("result").innerHTML = txt;
   }
