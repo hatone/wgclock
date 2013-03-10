@@ -14,12 +14,23 @@
     <link rel="shortcut icon" href="images/favicon.ico">
   </head>
   <body>
+    <style>
+      .main-content {
+        position: absolute;
+        top: 25%;
+      }
+
+    </style>
+
+
+
     <div class="container">
         </br>
-        <h2>
-          <div id="current_time">now loading...</div>
-        </h2>
-</br>
+        <div class="main-content">
+          <h2>
+            <div id="current_time" class="time-display">now loading...</div>
+          </h2>
+          </br>
 <div class="btn-group">
     <button class="btn btn-danger">UTC</button>
     <button class="btn">0</button>
@@ -103,10 +114,10 @@
     <button class="btn">22</button>
     <button class="btn">23</button>
 </div>
-
-    <div id="result"></div>
-
+      </div>
+      <div id="result"></div>
     </div>
+
 <script type="text/javascript">
   $(function() {
       setInterval ( 'clocknow()',1000 );
