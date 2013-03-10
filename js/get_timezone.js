@@ -1,5 +1,4 @@
 function getMyTimezone(){
-  document.write("this is debug.");
   httpObj = new XMLHttpRequest();
   httpObj.open("get", "./js/seeds/timezone_list.json", true);
   httpObj.onload = function(){
