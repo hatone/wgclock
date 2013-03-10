@@ -7,7 +7,7 @@ function getMyTimezone(){
     for (var i=0; i<myData.timezone.length; i++){
       txt = txt + myData.timezone[i].name + " is " + myData.timezone[i].difference+" difference<br>";
     }
-    document.getElementById("current_time").innerHTML = txt;
+    document.getElementById("result").innerHTML = txt;
   }
   httpObj.send(null);
 }
