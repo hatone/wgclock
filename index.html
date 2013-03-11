@@ -3,13 +3,13 @@
     <meta charset="utf-8">
     <title>world grid clock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-modal.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript" src="js/get_timezone.js"></script>
     <script type="text/javascript" src="js/currenttime.js"></script>
- 
+
     <link href="css/flat-ui.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
   </head>
@@ -26,6 +26,9 @@
       .btn-group {
         width:98%;
       }
+      .settings-modal {
+        text-align: right;
+      }
     </style>
 
 
@@ -41,8 +44,44 @@
             </div>
       </div>
       <div id="result"></div>
+    
+    <div class= "settings-modal">
+    <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal"><span class="fui-settings-24"></span></a>
     </div>
-
+    </div> 
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Preferences</h3>
+  </div>
+  <div class="modal-body">
+    <h3>set your timezone:</h3>
+      <form>
+        <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </form>
+    <h3>add timezone:</h3>
+      <form>
+        <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </form>
+    <a href="#" class="btn btn-danger"><span class="fui-plus-24"></span></a>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+    
 <script type="text/javascript">
   $(function() {
       setInterval ( 'clocknow()',1000 );

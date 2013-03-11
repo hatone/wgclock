@@ -7,6 +7,10 @@ function getMyTimezone(){
 
     var myTimezones = JSON.parse(localStorage.myTimezone);
     var currentTimezone = JSON.parse(localStorage.currentTimezone);
+    
+    if (currentTimezone == null){
+      document.getElementById("my_timezones").innerHTML = '<a class="btn btn-primary btn-large btn-block" href="#" target="_blank"> Add Timezone!</a>';
+    }
 
     //var txt = "";
     //for (var i=0; i<myData.timezone.length; i++){
