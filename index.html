@@ -9,6 +9,7 @@
     <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript" src="js/get_timezone.js"></script>
     <script type="text/javascript" src="js/currenttime.js"></script>
+    <script type="text/javascript" src="js/get_timezone_list.js"></script>
 
     <link href="css/flat-ui.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -53,30 +54,24 @@
     <h3 id="myModalLabel">Preferences</h3>
   </div>
   <div class="modal-body">
-    <h3>set your timezone:</h3>
-      <form>
-        <select>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+      <form id="setting_form">
+      <h3>set your timezone:</h3>
+        <select class="timezones">
+          <option>Please, reload again.</option>
         </select>
-      </form>
-    <h3>add timezone:</h3>
-      <form>
-        <select>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </form>
-    <a href="#" class="btn btn-danger"><span class="fui-plus-24"></span></a>
-  </div>
-  <div class="modal-footer">
-    <button class="btn btn-primary">Save changes</button>
+
+      <h3>add timezone:</h3>
+        <div id = "timezone_forms">
+          <select class="timezones">
+            <option>Please, reload again.</option>
+          </select>
+        </div>
+       <a href="#" class="btn btn-danger" id="add_timezone"><span class="fui-plus-24"></span></a>
+       </div>
+       <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" />
+       </div>
+    </form>
   </div>
 </div>
     
@@ -84,6 +79,13 @@
   $(function() {
       setInterval ( 'clocknow()',1000 );
       getMyTimezone();
+      getTimezoneList();
+      $('#add_timezone').click(function(){
+        addTimezone();
+      });
+      $("form#setting_form").submit(function() {
+        submitTimezone();
+      });
   });
 </script>
   </body>

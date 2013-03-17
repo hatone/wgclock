@@ -1,16 +1,16 @@
 {"timezone":[
   { 
-    "code":0,
+    "id":0,
     "name":"GMT",
     "difference":0
   },
   { 
-    "code":1,
+    "id":1,
     "name":"JST",
     "difference":9
   },
   { 
-    "code":2,
+    "id":2,
     "name":"PST",
     "difference":-8
   }
