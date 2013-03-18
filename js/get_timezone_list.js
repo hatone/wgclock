@@ -46,6 +46,7 @@ function submitTimezone(){
     localStorage.setItem("currentTimezone",JSON.stringify(timezones[0]));
     timezones.shift();
     localStorage.setItem("myTimezone",JSON.stringify(timezones));
+    getMyTimezone();
   }
   httpObj.send(null);
 }
