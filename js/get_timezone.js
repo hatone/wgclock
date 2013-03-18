@@ -44,9 +44,9 @@ function plotTime(diff,name){
         var t = i + diff;
         if (t > 23) t = -24 + t;
         if (t >= 8 && t <= 22){
-          myTimezoneStr += '<div class="btn btn-primary">' + t + "</div>";
+          myTimezoneStr += '<div class="btn btn-primary hour">' + t + "</div>";
         } else {
-          myTimezoneStr += '<div class="btn">'+ t + "</div>";
+          myTimezoneStr += '<div class="btn hour">'+ t + "</div>";
         }
       }
       myTimezoneStr += "</div></br></br>";
