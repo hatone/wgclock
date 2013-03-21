@@ -7,11 +7,11 @@
   { 
     "id":1,
     "name":"JST",
-    "difference":9
+    "difference":+9
   },
   { 
     "id":2,
     "name":"PST",
-    "difference":-8
+    "difference":-7
   }
 ]}
