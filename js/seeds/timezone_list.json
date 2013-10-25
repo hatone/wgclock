@@ -10,8 +10,13 @@
     "difference":9
   },
   { 
-    "id":2,
-    "name":"PST",
+    "code":2,
+    "name":"PDT",
     "difference":-8
+  }, 
+  { 
+    "code":3,
+    "name":"EDT",
+    "difference":-4
   }
 ]}
