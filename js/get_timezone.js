@@ -43,7 +43,8 @@ function plotTime(diff,name){
       for (var i=0; i<=23; i++){
         var t = i + diff;
         if (t > 23) t = -24 + t;
-        if (t >= 8 && t <= 22){
+        if (t < -1) t = 24 + t;
+        if ((t >= 8 && t <= 22)){
           myTimezoneStr += '<div class="btn btn-primary hour">' + t + "</div>";
         } else {
           myTimezoneStr += '<div class="btn hour">'+ t + "</div>";
