@@ -32,7 +32,7 @@ function showMyTimes(currentTimezone,myTimezones){
     console.log(current_str);
 
     for (var i=1; i < myTimezones.length; i++){ 
-      var diff = parseInt(myTimezones[i].difference) - parseInt(currentTimezone.difference);
+      var Math.abs(diff) = parseInt(myTimezones[i].difference) - parseInt(currentTimezone.difference);
       console.log(diff);
       plotTime(diff,myTimezones[i].name)
     }
