@@ -5,33 +5,37 @@ function getMyTimezone(){
 
     var myData = JSON.parse(this.responseText);
 
-    var myTimezones = JSON.parse(localStorage.myTimezone);
-    var currentTimezone = JSON.parse(localStorage.currentTimezone);
-    
-    if (currentTimezone == null){
-      document.getElementById("my_timezones").innerHTML = '<a class="btn btn-primary btn-large btn-block" href="#" target="_blank"> Add Timezone!</a>';
-    }
+    if(localStorage.myTimezone != null) {
+      var myTimezones = JSON.parse(localStorage.myTimezone);
+      var currentTimezone = JSON.parse(localStorage.currentTimezone);
+      showMyTimes(currentTimezone,myTimezones);
+
+      //if (currentTimezone == null){
+      //  document.getElementById("my_timezones").innerHTML = '<a class="btn btn-primary btn-large btn-block" href="#" target="_blank"> Add Timezone!</a>';
+      //}
+
 
     //var txt = "";
     //for (var i=0; i<myData.timezone.length; i++){
     //  txt = txt + myData.timezone[i].name + " is " + myData.timezone[i].difference+" difference<br>";
     //}
     //document.getElementById("result").innerHTML = txt;
-    showMyTimes(currentTimezone,myTimezones);
+
+    }
   }
   httpObj.send(null);
 }
 
 function showMyTimes(currentTimezone,myTimezones){
     console.log(myTimezones);
-    console.log(currentTimezone);
+    //console.log(currentTimezone);
 
     var current_str = "";
     plotTime(0,currentTimezone.name);
 
     console.log(current_str);
 
-    for (var i=1; i < myTimezones.length; i++){ 
+    for (var i=0; i < myTimezones.length; i++){ 
       var diff = parseInt(myTimezones[i].difference) - parseInt(currentTimezone.difference);
       console.log(diff);
       plotTime(diff,myTimezones[i].name)
