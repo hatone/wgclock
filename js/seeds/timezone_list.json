@@ -10,12 +10,12 @@
     "difference":9
   },
   { 
-    "code":2,
+    "id":2,
     "name":"PDT",
     "difference":-8
   }, 
   { 
-    "code":3,
+    "id":3,
     "name":"EDT",
     "difference":-4
   }

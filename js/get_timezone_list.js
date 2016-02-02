@@ -1,15 +1,31 @@
 function getTimezoneList(){
   httpObj = new XMLHttpRequest();
   httpObj.open("get", "./js/seeds/timezone_list.json", true);
+
+  var myTimezones = JSON.parse(localStorage.myTimezone);
+  var currentTimezone = JSON.parse(localStorage.currentTimezone);
+
   httpObj.onload = function(){
 
+
+    console.log("===========debug===========");
     var myData = JSON.parse(this.responseText);
 
     var txt = "";
     for (var i=0; i<myData.timezone.length; i++){
+
+      if (parseInt(currentTimezone.id-1) == i) {
+      console.log(currentTimezone.id);
+      txt = txt + '<option value="'+ myData.timezone[i].id +'" selected="selected">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+      } 
+      else {
       txt = txt + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+      }
     }
+
     $(".timezones").html(txt);
+    //document.getElementById("current_timezone").innerHTML += '<option value="timezones">hello</option>'
+    //document.getElementById("my_timezones_menu").innerHTML += '<option value="timezones">hellohellohello</option>'
   }
   httpObj.send(null);
 }
