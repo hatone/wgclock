@@ -27,8 +27,10 @@ function getMyTimezone(){
 }
 
 function showMyTimes(currentTimezone,myTimezones){
+    console.log("currentTimezone");
+    console.log(currentTimezone);
+    console.log("myTimezones");
     console.log(myTimezones);
-    //console.log(currentTimezone);
 
     var current_str = "";
     plotTime(0,currentTimezone.name);
@@ -40,6 +42,8 @@ function showMyTimes(currentTimezone,myTimezones){
       console.log(diff);
       plotTime(diff,myTimezones[i].name)
     }
+
+
 }
 
 function plotTime(diff,name){
