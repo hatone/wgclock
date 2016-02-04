@@ -4,50 +4,61 @@ function getTimezoneList(){
 
   httpObj.onload = function(){
 
-    console.log("===========debug===========");
     var myData = JSON.parse(this.responseText);
 
     var currentTimezoneOption = "";
-    var mtTimezoneOptions = "";
-    for (var i=0; i<myData.timezone.length; i++){
 
-     if(localStorage.currentTimezone != null) {
-      var currentTimezone = JSON.parse(localStorage.currentTimezone);
 
-      if (parseInt(currentTimezone.id-1) == i) {
-        console.log(currentTimezone.id);
-        currentTimezoneOption = currentTimezoneOption + '<option value="'+ myData.timezone[i].id +'" selected="selected">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
-      } 
-      else {
-        currentTimezoneOption = currentTimezoneOption + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
-      }
+    var currentTimezone = "";
+    if(localStorage.currentTimezone != null) {
+      currentTimezone = JSON.parse(localStorage.currentTimezone);
 
-      if(localStorage.myTimezones != null) {
-        var myTimezones = JSON.parse(localStorage.myTimezone);
-
-        if (parseInt(myTimezones.id-1) == i) {
-          console.log(myTimezones.id);
-          mtTimezoneOptions = mtTimezoneOptions + '<option value="'+ myData.timezone[i].id +'" selected="selected">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+      for (var i=0; i<myData.timezone.length; i++){
+        if (parseInt(currentTimezone.id) == i) {
+          currentTimezoneOption = currentTimezoneOption + '<option value="'+ myData.timezone[i].id +'" selected="selected">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
         } 
         else {
-          mtTimezoneOptions = mtTimezoneOptions + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+          currentTimezoneOption = currentTimezoneOption + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
         }
+      }
+    } else {
+      for (var i=0; i<myData.timezone.length; i++){
+        currentTimezoneOption = currentTimezoneOption + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+      }
+    }
+
+
+
+    var mtTimezoneOptions = "";
+    if(localStorage.myTimezone != null) {
+      myTimezones = JSON.parse(localStorage.myTimezone);
+      for (var mt=0; mt<myTimezones.length; mt++){
+        for (var i=0; i<myData.timezone.length; i++){
+          if (parseInt(myTimezones[mt].id) == i) {
+            mtTimezoneOptions = mtTimezoneOptions + '<option value="'+ myData.timezone[i].id +'" selected="selected">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+          } 
+          else {
+            mtTimezoneOptions = mtTimezoneOptions + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+          }
+        }
+        $("#timezone_forms").append('<br>');
+        $("#timezone_forms").append('<select class="timezones" id="my_timezones_menu2">'+mtTimezoneOptions+'</select>');
+        mtTimezoneOptions = "";
       }
 
     } else {
-      currentTimezoneOption = currentTimezoneOption + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
-      mtTimezoneOptions = mtTimezoneOptions + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+      for (var i=0; i<myData.timezone.length; i++){
+        mtTimezoneOptions = mtTimezoneOptions + '<option value="'+ myData.timezone[i].id +'">' + myData.timezone[i].name + " (" + myData.timezone[i].difference + ")</option>";
+      }
     }
-  }
 
-  document.getElementById("current_timezone").innerHTML = currentTimezoneOption
-  document.getElementById("my_timezones_menu").innerHTML = mtTimezoneOptions
-  //$(".timezones").html(txt);
-    //document.getElementById("current_timezone").innerHTML += '<option value="timezones">hello</option>'
-    //document.getElementById("my_timezones_menu").innerHTML += '<option value="timezones">hellohellohello</option>'
+    document.getElementById("current_timezone").innerHTML = currentTimezoneOption
   }
   httpObj.send(null);
 }
+
+
+
 
 function addTimezone(){
   httpObj = new XMLHttpRequest();
