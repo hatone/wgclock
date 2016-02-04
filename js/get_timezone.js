@@ -27,19 +27,11 @@ function getMyTimezone(){
 }
 
 function showMyTimes(currentTimezone,myTimezones){
-    console.log("currentTimezone");
-    console.log(currentTimezone);
-    console.log("myTimezones");
-    console.log(myTimezones);
-
     var current_str = "";
     plotTime(0,currentTimezone.name);
 
-    console.log(current_str);
-
     for (var i=0; i < myTimezones.length; i++){ 
       var diff = parseInt(myTimezones[i].difference) - parseInt(currentTimezone.difference);
-      console.log(diff);
       plotTime(diff,myTimezones[i].name)
     }
 
