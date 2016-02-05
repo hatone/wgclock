@@ -45,13 +45,13 @@
             <div id="current_time" class="time-display">now loading...</div>
         </h2>
         </br>
-        <div id="my_timezones">
+        <div id="my_timezones" data-intro="Your timezones" data-position="bottom">
         </div>
     </div>
     <div id="result"></div>
 
     <div class= "settings-modal">
-        <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal"><span class="fui-settings-24"></span></a>
+        <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" data-intro="Push!" data-position="bottom"><span class="fui-settings-24"></span></a>
     </div>
 </div>
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -86,6 +86,13 @@
         $("form#setting_form").submit(function() {
             submitTimezone();
         });
+        setTimeout(function(){
+            if(localStorage.tutorial == null) {
+                $('body').chardinJs('start')
+                localStorage.setItem("tutorial",'1');
+            } 
+        }, 1500);
+
     });
 </script>
 </body>
