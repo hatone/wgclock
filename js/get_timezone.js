@@ -2,12 +2,18 @@ function getMyTimezone(){
   httpObj = new XMLHttpRequest();
   httpObj.open("get", "./js/seeds/timezone_list.json", true);
   httpObj.onload = function(){
-
+      
     if(localStorage.myTimezone != null) {
+
+    } else {
+        
+        localStorage.setItem("currentTimezone",'{"name":"GMT","difference":0}');
+        localStorage.setItem("myTimezone",'[{"name":"PST","difference":-8},{"name":"EST","difference":-5},{"name":"MSK","difference":4}]');
+        
+    }
       var myTimezones = JSON.parse(localStorage.myTimezone);
       var currentTimezone = JSON.parse(localStorage.currentTimezone);
-      showMyTimes(currentTimezone,myTimezones);
-    }
+      showMyTimes(currentTimezone,myTimezones); 
   }
     
   httpObj.send(null);
