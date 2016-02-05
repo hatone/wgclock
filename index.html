@@ -7,10 +7,13 @@
   <script type="text/javascript" src="js/bootstrap-modal.js"></script>
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/jquery.chardinjs/0.1.2/chardinjs.css" rel="stylesheet">
+
   <script type="text/javascript" src="js/get_timezone.js"></script>
   <script type="text/javascript" src="js/currenttime.js"></script>
   <script type="text/javascript" src="js/get_timezone_list.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/jquery.chardinjs/0.1.2/chardinjs.js"></script>
+  
   <link href="css/flat-ui.css" rel="stylesheet">
   <link rel="shortcut icon" href="images/favicon.ico">
 </head>
@@ -61,12 +64,10 @@
       <h3>set your timezone:</h3>
       <select class="timezones" id="current_timezone">
       </select>
-
       <h3>add timezone:</h3>
       <div id = "timezone_forms">
       </div>
       <div class="btn btn-danger" id="add_timezone"><span class="fui-plus-24"></span></div>
-    </div>
     <div class="modal-footer">
       <input type="submit" class="btn btn-primary" />
     </div>
