@@ -14,7 +14,8 @@ function clocknow(){
     if ( h < 10 ) { h = "0" + h ; }
     if ( mi < 10 ) { mi = "0" + mi ; }
     if ( s < 10 ) { s = "0" + s ; }
- 
-    document.getElementById("current_time").innerHTML = "<span id="+ "date" +">" + y + "/" + mo + "/" + d + "/(" + w + ")</span></br><span id=" + "time" + ">" + h + ":" + mi + ":" + s;
+    
+    var chardon_clock = 'data-intro="Here is your clock!" data-position="left"'
+    document.getElementById("current_time").innerHTML = "<span id="+ "date" +">" + y + "/" + mo + "/" + d + "/(" + w + ")</span></br><span id=" + "time" + " " + chardon_clock + " >" + h + ":" + mi + ":" + s;
 }
  
