@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d479175-aeea-4c43-8aeb-9b6b465cf195" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/get_timezone.js" afterPath="$PROJECT_DIR$/js/get_timezone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/get_timezone_list.js" afterPath="$PROJECT_DIR$/js/get_timezone_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/seeds/timezone_list.json" afterPath="$PROJECT_DIR$/js/seeds/timezone_list.json" />
     </list>
     <ignored path="wgclock.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,9 +48,9 @@
         <entry file="file://$PROJECT_DIR$/js/get_timezone.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.22462562">
-              <caret line="9" column="138" selection-start-line="9" selection-start-column="138" selection-end-line="9" selection-end-column="138" />
+              <caret line="9" column="140" selection-start-line="9" selection-start-column="140" selection-end-line="9" selection-end-column="140" />
               <folding>
-                <marker date="1454653931000" expanded="true" signature="1057:1483" placeholder="..." />
+                <marker date="1454654345000" expanded="true" signature="1059:1485" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -584,11 +580,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7671000" />
+    <option name="totallyTimeSpent" value="7706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1676" height="1027" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -597,7 +593,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20746633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -652,7 +648,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1454653931000" expanded="true" signature="1057:1483" placeholder="..." />
+            <marker date="1454654345000" expanded="true" signature="1059:1485" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -702,7 +698,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1454653931000" expanded="true" signature="1057:1483" placeholder="..." />
+            <marker date="1454654345000" expanded="true" signature="1059:1485" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -750,9 +746,9 @@
     <entry file="file://$PROJECT_DIR$/js/get_timezone.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22462562">
-          <caret line="9" column="138" selection-start-line="9" selection-start-column="138" selection-end-line="9" selection-end-column="138" />
+          <caret line="9" column="140" selection-start-line="9" selection-start-column="140" selection-end-line="9" selection-end-column="140" />
           <folding>
-            <marker date="1454653931000" expanded="true" signature="1057:1483" placeholder="..." />
+            <marker date="1454654345000" expanded="true" signature="1059:1485" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -7,7 +7,7 @@ function getMyTimezone(){
             localStorage.setItem("currentTimezone",'{"name":"GMT","difference":0}');
         }
         if(localStorage.myTimezone == null) {
-            localStorage.setItem("myTimezone",'[{"name":"PST","difference":-8},{"name":"EST","difference":-5},{"name":"JST","difference":9git }]');
+            localStorage.setItem("myTimezone",'[{"name":"PST","difference":-8},{"name":"EST","difference":-5},{"name":"JST","difference":9}]');
         }
         var currentTimezone = JSON.parse(localStorage.currentTimezone);
         var myTimezones = JSON.parse(localStorage.myTimezone);
