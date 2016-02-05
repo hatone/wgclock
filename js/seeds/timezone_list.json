@@ -1,21 +1,17 @@
 {"timezone":[
   { 
-    "id":0,
-    "name":"GMT",
+    "name":"UTC",
     "difference":0
   },
   { 
-    "id":1,
     "name":"JST",
     "difference":9
   },
   { 
-    "id":2,
     "name":"PDT",
     "difference":-8
   }, 
   { 
-    "id":3,
     "name":"EDT",
     "difference":-4
   }
