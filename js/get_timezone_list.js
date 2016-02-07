@@ -28,7 +28,7 @@ function getTimezoneList(){
         var myTimezoneOptions = "";
         if(localStorage.myTimezone != null) {
             var myTimezones = JSON.parse(localStorage.myTimezone);
-            myTimezones.forEach(function(ltz) {
+            myTimezones.forEach(function(ltz,ltzindex) {
                 timezoneList.timezone.forEach(function(tz,index) {
                     if (ltz.name == tz.name) {
                         myTimezoneOptions = myTimezoneOptions + '<option value="'+ index +'" selected="selected">' + tz.name + " (" + tz.difference + ")</option>";
@@ -38,7 +38,8 @@ function getTimezoneList(){
                     }
                 });
                 $('#timezone_forms').append('<br>');
-                $('#timezone_forms').append('<select class="timezones" id="my_timezones_menu2">' + myTimezoneOptions + '</select>');
+                $('#timezone_forms').append('<select class="timezones" id="tzbtn'+ltzindex+'">' + myTimezoneOptions + '</select>');
+                $('#timezone_forms').append('<button onclick = "deleteTimezone(event,'+ltzindex+');" form = "timezone_forms" id=dbtn'+ltzindex+'>☒</button>');
                 myTimezoneOptions = "";
             });
         } else {
@@ -50,6 +51,14 @@ function getTimezoneList(){
         document.getElementById("current_timezone").innerHTML = currentTimezoneOption
     }
     httpObj.send(null);
+}
+
+function deleteTimezone(event,index){
+    $("#tzbtn"+index).prev().remove();
+    $("#tzbtn"+index).remove();
+    $("#dbtn"+index).remove();
+    console.log(index);
+    event.preventDefault();
 }
 
 function addTimezone(){
