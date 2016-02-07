@@ -39,7 +39,7 @@ function getTimezoneList(){
                 });
                 $('#timezone_forms').append('<br>');
                 $('#timezone_forms').append('<select class="timezones" id="tzbtn'+ltzindex+'">' + myTimezoneOptions + '</select>');
-                $('#timezone_forms').append('<button onclick = "deleteTimezone(event,'+ltzindex+');" form = "timezone_forms" id=dbtn'+ltzindex+'>☒</button>');
+                $('#timezone_forms').append(' <button onclick = "deleteTimezone(event,'+ltzindex+');" form = "timezone_forms" id=dbtn'+ltzindex+'><span class="fui-cross-16"></span></button>');
                 myTimezoneOptions = "";
             });
         } else {
@@ -72,13 +72,17 @@ function addTimezone(){
             txt = txt + '<option value="'+ index +'">' + tz.name + " (" + tz.difference + ")</option>";
         });
 
-        var a = $("#timezone_forms").find("select").filter(":last").get(0);
-        console.log(a.id);        
-        var index = parseInt(a.id.replace("tzbtn",""))+1;
-
+        var lastobj = $("#timezone_forms").find("select").filter(":last").get(0);
+        var index;
+        if(lastobj == null) {
+            index = 0;
+        } else {
+            index = parseInt(lastobj.id.replace("tzbtn",""))+1;
+        }
+            
         $('#timezone_forms').append('<br>');
         $('#timezone_forms').append('<select class="timezones" id="tzbtn'+index+'">' + txt + '</select>');
-        $('#timezone_forms').append('<button onclick = "deleteTimezone(event,'+index+');" form = "timezone_forms" id=dbtn'+index+'>☒</button>');
+        $('#timezone_forms').append(' <button onclick = "deleteTimezone(event,'+index+');" form = "timezone_forms" id=dbtn'+index+'><span class="fui-cross-16"></span></button>');
     }
     httpObj.send(null);
 }
