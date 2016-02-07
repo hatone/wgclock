@@ -65,7 +65,6 @@ function addTimezone(){
     httpObj = new XMLHttpRequest();
     httpObj.open("get", "./js/seeds/timezone_list.json", true);
     httpObj.onload = function(){
-
         var myData = JSON.parse(this.responseText);
 
         var txt = "";
@@ -73,8 +72,13 @@ function addTimezone(){
             txt = txt + '<option value="'+ index +'">' + tz.name + " (" + tz.difference + ")</option>";
         });
 
-        $("#timezone_forms").append('<br>');
-        $("#timezone_forms").append('<select class="timezones">' + txt +'</select>');
+        var a = $("#timezone_forms").find("select").filter(":last").get(0);
+        console.log(a.id);        
+        var index = parseInt(a.id.replace("tzbtn",""))+1;
+
+        $('#timezone_forms').append('<br>');
+        $('#timezone_forms').append('<select class="timezones" id="tzbtn'+index+'">' + txt + '</select>');
+        $('#timezone_forms').append('<button onclick = "deleteTimezone(event,'+index+');" form = "timezone_forms" id=dbtn'+index+'>☒</button>');
     }
     httpObj.send(null);
 }
