@@ -9,9 +9,8 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/jquery.chardinjs/0.1.2/chardinjs.css" rel="stylesheet">
 
-    <script type="text/javascript" src="js/get_timezone.js"></script>
+    <script type="text/javascript" src="js/wgclock.js"></script>
     <script type="text/javascript" src="js/currenttime.js"></script>
-    <script type="text/javascript" src="js/get_timezone_list.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.chardinjs/0.1.2/chardinjs.js"></script>
 
     <link href="css/flat-ui.css" rel="stylesheet">
@@ -75,25 +74,5 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    $(function() {
-        setInterval ( 'clocknow()',1000 );
-        getMyTimezone();
-        getTimezoneList();
-        $('#add_timezone').click(function(){
-            addTimezone();
-        });
-        $("form#setting_form").submit(function() {
-            submitTimezone();
-        });
-        setTimeout(function(){
-            if(localStorage.tutorial == null) {
-                $('body').chardinJs('start')
-                localStorage.setItem("tutorial",'1');
-            } 
-        }, 1500);
-
-    });
-</script>
 </body>
 </html>
