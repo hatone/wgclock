@@ -1,6 +1,6 @@
 # World Glid Clock
-A simple clock to see the time difference.
-Live Demo(http://hatone.github.io/wgclock/)
+A simple clock to see the time difference.  
+[Live Demo](http://hatone.github.io/wgclock/)
 
 # How to use
 Access to this page [wgclock](http://hatone.github.io/wgclock/).  
