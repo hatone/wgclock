@@ -1,13 +1,13 @@
 function clocknow(){
-    weeks = new Array("Sun","Mon","Thu","Wed","Thr","Fri","Sat") ;
-    now = new Date() ;
-    y = now.getFullYear() ;
-    mo = now.getMonth() + 1 ;
-    d = now.getDate() ;
-    w = weeks[now.getDay()] ;
-    h = now.getHours();
-    mi = now.getMinutes();
-    s = now.getSeconds();
+    var weeks = new Array("Sun","Mon","Thu","Wed","Thr","Fri","Sat") ;
+    var now = new Date() ;
+    var y = now.getFullYear() ;
+    var mo = now.getMonth() + 1 ;
+    var d = now.getDate() ;
+    var w = weeks[now.getDay()] ;
+    var h = now.getHours();
+    var mi = now.getMinutes();
+    var s = now.getSeconds();
  
     if ( mo < 10 ) { mo = "0" + mo ; }
     if ( d < 10 ) { d = "0" + d ; }
