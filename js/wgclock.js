@@ -47,12 +47,18 @@ function showMyTimes(currentTimezone,myTimezones){
 }
 
 function plotTime(diff,name){
+    var now = new Date() ;
+    var h = now.getHours();
     var myTimezoneStr = '<div class="btn-group"><div class="btn btn-danger timezone">'+ name + '</div>';
     for (var i=0; i<=23; i++){
         var t = i + diff;
         if (t > 23) t = -24 + t;
         if (t <= -1) t = 24 + t;
-        if ((t >= 8 && t <= 22)){
+        
+        if(i==h){
+            myTimezoneStr += '<div class="btn btn-warning hour">' + t + "</div>"; 
+        }
+        else if ((t >= 8 && t <= 22)){
             myTimezoneStr += '<div class="btn btn-primary hour">' + t + "</div>";
         } else {
             myTimezoneStr += '<div class="btn hour">'+ t + "</div>";
