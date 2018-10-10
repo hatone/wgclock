@@ -1,5 +1,5 @@
 function clocknow(){
-    var weeks = new Array("Sun","Mon","Thu","Wed","Thr","Fri","Sat") ;
+    var weeks = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat") ;
     var now = new Date() ;
     var y = now.getFullYear() ;
     var mo = now.getMonth() + 1 ;
